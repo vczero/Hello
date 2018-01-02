@@ -89,9 +89,9 @@ class BasicLayout extends React.PureComponent {
   getPageTitle() {
     const { routerData, location } = this.props;
     const { pathname } = location;
-    let title = 'Ant Design Pro';
+    let title = 'LBS SPACE';
     if (routerData[pathname] && routerData[pathname].name) {
-      title = `${routerData[pathname].name} - Ant Design Pro`;
+      title = `${routerData[pathname].name} - LBS SPACE`;
     }
     return title;
   }
@@ -101,30 +101,10 @@ class BasicLayout extends React.PureComponent {
       payload: collapsed,
     });
   }
-  handleNoticeClear = (type) => {
-    message.success(`清空了${type}`);
-    this.props.dispatch({
-      type: 'global/clearNotices',
-      payload: type,
-    });
-  }
-  handleMenuClick = ({ key }) => {
-    if (key === 'logout') {
-      this.props.dispatch({
-        type: 'login/logout',
-      });
-    }
-  }
-  handleNoticeVisibleChange = (visible) => {
-    if (visible) {
-      this.props.dispatch({
-        type: 'global/fetchNotices',
-      });
-    }
-  }
+
   render() {
     const {
-      currentUser, collapsed, fetchingNotices, notices, routerData, match, location,
+      collapsed, fetchingNotices, notices, routerData, match, location,
     } = this.props;
     const layout = (
       <Layout>
@@ -137,12 +117,8 @@ class BasicLayout extends React.PureComponent {
         <Layout>
           <GlobalHeader
             logo={logo}
-            currentUser={currentUser}
-            fetchingNotices={fetchingNotices}
-            notices={notices}
             collapsed={collapsed}
             isMobile={this.state.isMobile}
-            onNoticeClear={this.handleNoticeClear}
             onCollapse={this.handleMenuCollapse}
             onMenuClick={this.handleMenuClick}
             onNoticeVisibleChange={this.handleNoticeVisibleChange}
@@ -171,21 +147,13 @@ class BasicLayout extends React.PureComponent {
             </div>
             <GlobalFooter
               links={[{
-                title: 'Pro 首页',
-                href: 'http://pro.ant.design',
-                blankTarget: true,
-              }, {
-                title: 'GitHub',
-                href: 'https://github.com/ant-design/ant-design-pro',
-                blankTarget: true,
-              }, {
-                title: 'Ant Design',
-                href: 'http://ant.design',
+                title: 'LBS SPACE 首页',
+                href: '/',
                 blankTarget: true,
               }]}
               copyright={
                 <div>
-                  Copyright <Icon type="copyright" /> 2017 蚂蚁金服体验技术部出品
+                  copyright <Icon type="copyright" /> 2017 aissues.com
                 </div>
               }
             />
@@ -205,7 +173,6 @@ class BasicLayout extends React.PureComponent {
 }
 
 export default connect(state => ({
-  currentUser: state.user.currentUser,
   collapsed: state.global.collapsed,
   fetchingNotices: state.global.fetchingNotices,
   notices: state.global.notices,
