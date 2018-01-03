@@ -1,0 +1,27 @@
+.menu-logo{
+  height:64px;
+  line-height:64px;
+  width:256px;
+  background-color: #002140;
+  color: #fff;
+  position: fixed;
+  z-index: 3;
+}
+
+.menu-logo>div{
+  float: left;
+}
+
+.menu-logo img{
+  width: 30px;
+  margin-left:20px;
+}
+.menu-pname{
+  margin-left:10px;
+  font-weight: bold;
+  font-size:20px;
+}
+
+.menu-c{
+  padding-top:64px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Layout } from 'antd';
 
 import {
   BrowserRouter as Router,
@@ -9,25 +10,27 @@ import {
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-import Home from './components/Home'
-import About from './components/About'
-import AMap from './components/AMap'
+import Home from './routes/Home';
+import About from './routes/About';
+import Kuaiji from './routes/Kuaiji';
+import Header from './components/Header';
+import Menu from './components/Menu';
 
 const BasicExample = () => (
-  <Router>
-    <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/map">Topics</Link></li>
-      </ul>
-      <hr/>
-
-      <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path="/map" component={AMap}/>
-    </div>
-  </Router>
+  <Layout>
+    <Router>
+      <div className="index-main-container">
+        <Header/>
+        <div className="index-menu-main">
+          <Menu/>
+        </div>
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/kuaiji" component={Kuaiji}/>
+      </div>
+    </Router>
+  </Layout>
+  
 )
 export default BasicExample
 
