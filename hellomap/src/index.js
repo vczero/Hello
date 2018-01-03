@@ -1,26 +1,36 @@
-import 'babel-polyfill';
-import dva from 'dva';
-import 'moment/locale/zh-cn';
-import FastClick from 'fastclick';
-import './g2';
-import onError from './error';
-// import browserHistory from 'history/createBrowserHistory';
-import './index.less';
-// 1. Initialize
-const app = dva({
-  // history: browserHistory(),
-  onError,
-});
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { DatePicker } from 'antd';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import './index.css';
+import registerServiceWorker from './registerServiceWorker';
 
-// 2. Plugins
-// app.use({});
+import Home from './components/Home'
+import About from './components/About'
+import AMap from './components/AMap'
 
-// 3. Register global model
-app.model(require('./models/global'));
+const BasicExample = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/map">Topics</Link></li>
+      </ul>
+      <hr/>
 
-// 4. Router
-app.router(require('./router'));
+      <Route exact path="/" component={Home}/>
+      <Route path="/about" component={About}/>
+      <Route path="/map" component={AMap}/>
+    </div>
+  </Router>
+)
+export default BasicExample
 
-// 5. Start
-app.start('#root');
-FastClick.attach(document.body);
+
+ReactDOM.render(<BasicExample />, document.getElementById('root'));
+registerServiceWorker();
