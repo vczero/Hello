@@ -16,7 +16,7 @@ import Kuaiji from './routes/Kuaiji';
 import Header from './components/Header';
 import Menu from './components/Menu';
 
-const BasicExample = () => (
+const App = () => (
   <Layout>
     <Router>
       <div className="index-main-container">
@@ -32,8 +32,8 @@ const BasicExample = () => (
   </Layout>
   
 )
-export default BasicExample
+export default App
 
 
-ReactDOM.render(<BasicExample />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
