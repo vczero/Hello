@@ -24,9 +24,11 @@ const App = () => (
         <div className="index-menu-main">
           <Menu/>
         </div>
-        <Route exact path="/" component={Home}/>
-        <Route path="/about" component={About}/>
-        <Route path="/kuaiji" component={Kuaiji}/>
+        <div className="index-content">
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/kuaiji" component={Kuaiji}/>
+        </div>
       </div>
     </Router>
   </Layout>

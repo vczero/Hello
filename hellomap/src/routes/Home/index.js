@@ -1,15 +1,11 @@
 import React from 'react';
-import { DatePicker } from 'antd';
-import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
-import 'ant-design-pro/dist/ant-design-pro.css';
 import './index.css';
-
-
+import AMap  from './../../components/AMap';
 
 
 const Home = () => (
   <div>
-    Hello
+    <AMap/>
   </div>
 )
 export default Home

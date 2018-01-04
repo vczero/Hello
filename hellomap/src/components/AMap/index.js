@@ -1,10 +1,17 @@
-import React from 'react';
+import React from "react";
 
+class AMapComponent extends React.Component {
+  constructor(pros) {
+    super(pros);
+  }
 
-const AMap = () => (
-  <div>
-    <h2>AMap</h2>
-  </div>
-)
+  render() {
+    return <div />;
+  }
 
-export default AMap;
+  componentDidMount() {
+    
+  }
+}
+
+export default AMapComponent;
