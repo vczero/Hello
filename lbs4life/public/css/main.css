@@ -8,44 +8,44 @@ body {
   font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #595959;
+  font-size: 13px;
 }
 
-.index-main-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.65);
-  background-color: #f2f4f5;
-}
-
-.index-menu-main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 256px;
-  overflow: scroll;
-  z-index: 2;
-  background-color: #00152a;
-  -webkit-box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
-  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
-}
-
-/*override antd*/
-.ant-menu-item {
-  height: 35px !important;
-  line-height: 35px !important;
-  padding-left: 35px !important;
-}
-
-.index-content {
+.main-content {
   position: absolute;
   top: 65px;
   left: 257px;
   right: 0;
   bottom: 0;
+  background-color: #f2f4f5;
+}
+
+.main-fr {
+  float: right;
+}
+
+.main-map {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  bottom: 14px;
+  right: 14px;
+  -webkit-box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+}
+
+::selection {
+  background: #188FFF;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #188FFF;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #188FFF;
+  color: #fff;
 }
