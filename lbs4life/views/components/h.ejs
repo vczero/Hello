@@ -1,23 +1,31 @@
 <div class="h">
-  <div class="main-fr h-user">
-    <div class="main-fr h-about">
-      About Me
-    </div>
-    <div class="main-fr h-user-avatar">
-      <img src="https://avatars2.githubusercontent.com/u/6133685?s=460&v=4" />
-    </div>
+  <div class="main-fr h-nav">
+    关于本站
+  </div>
+  <div class="main-fr h-nav">
+    基础技术
+  </div>
+  <div class="main-fr h-nav">
+    实验室
   </div>
 </div>
 
 <style type="text/css">
   .h {
     position: absolute;
-    top:0;
-    left:0;
-    right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
     height: 64px;
     background-color: #fff;
+  }
+
+  .h-nav {
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size:14px;
   }
 
   .h>div {
@@ -29,23 +37,7 @@
     float: right;
   }
 
-  .h-user-avatar {
-    margin-right: 10px;
-  }
-
-  .h-user-avatar>img {
-    width: 30px;
-    border-radius: 30px;
-    vertical-align: middle;
-  }
-
-  .h-user {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: bold;
-  }
-
-  .h-user:hover {
+  .h-nav:hover {
     background-color: #E7F7FF;
     cursor: pointer;
   }
