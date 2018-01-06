@@ -1,0 +1,45 @@
+<% include ./../components/header %>
+  <div class="main-content">
+    <div id="map-container" class="main-map"></div>
+    <div class="fangjia-iframe">
+      <iframe src="http://aissues.com/"></iframe>
+    </div>
+  </div>
+  <style type="text/css">
+    .fangjia-iframe {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      bottom: 25px;
+      background-color: #fff;
+      opacity: 0.9;
+      z-index: 3;
+      width: 375px;
+    }
+
+    .fangjia-iframe iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 375px;
+      border: none;
+    }
+  </style>
+  <script type="text/javascript" src="/js/index/map.js"></script>
+  <script type="text/javascript">
+    (function () {
+      //加载iframe
+      var iframe = $('.fangjia-iframe iframe');
+      iframe.height($('.fangjia-iframe').height());
+      //隐藏头部
+      var objs = iframe.contentWindow.document.getElementsByTagName('div');
+      for (var i = 0; i < objs.length; i++) {
+        var elm = objs[i];
+        if (elm.className == 'hz-header') {
+          elm.style.display = 'none';
+        }
+      }
+
+    })();
+  </script>
+  <% include ./../components/footer %>

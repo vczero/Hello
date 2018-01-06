@@ -12,11 +12,21 @@
       <span>位置解读</span>
     </div>
     <ul class="menu-small">
-      <li>01| 会计工作人员生存报告</li>
-      <li class="menu-active">02| 金融从业者地理分布</li>
-      <li>03| 全国高校位置地图</li>
-      <li>04| 时令蔬果的空间的表达</li>
-      <li>05| 房价地图</li>
+      <li class="menu-weizhi-kuaiji">
+        <a class="menu-weizhi-kuaiji-a" href="/">01| 会计工作人员生存报告</a>
+      </li>
+      <li>
+        <a href="/">02| 金融从业者地理分布</a>
+      </li>
+      <li>
+        <a href="/">03| 全国高校位置地图</a>
+      </li>
+      <li>
+        <a href="/">04| 时令蔬果的空间的表达</a>
+      </li>
+      <li class="menu-weizhi-fangjia">
+        <a class="menu-weizhi-fangjia-a" href="/weizhi/fangjia.html">05| 房价地图</a>
+      </li>
     </ul>
   </div>
   <!--故事与LBS-->
@@ -94,7 +104,7 @@
   .menu-logo-img img {
     height: 30px;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 8px;
     margin-top: -10px;
   }
 
@@ -137,13 +147,39 @@
     padding-left: 20px;
   }
 
+  .menu-small li a {
+    color: #A6AAAE;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .menu-small li a:hover {
+    background-color: rgb(231, 239, 255);
+    color: #000 !important;
+  }
+
   .menu-small li:hover {
     background-color: rgb(231, 239, 255);
-    color: #000;
+    color: #000 !important;
   }
 
   .menu-active {
     background: #188FFF;
+  }
+
+  .menu-active-color {
     color: #fff !important;
   }
 </style>
+<script type="text/javascript">
+  (function () {
+    $('.menu li').removeClass('menu-active');
+    $('.menu li a').removeClass('menu-active-color');
+    var menu = '<%=menu%>';
+    if (menu) {
+      $('.' + menu).addClass('menu-active');
+      $('.' + menu + '-a').addClass('menu-active-color');
+    }
+  })();
+</script>
