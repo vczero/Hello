@@ -3,13 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
+  res.render('weizhi/kuaiji', {
     menu: 'menu-weizhi-kuaiji'
   });
 });
 
 router.get('/weizhi/kuaiji.html', function(req, res, next) {
-  res.render('index', {
+  res.render('weizhi/kuaiji', {
     menu: 'menu-weizhi-kuaiji'
   });
 });

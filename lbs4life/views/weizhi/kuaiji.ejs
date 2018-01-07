@@ -1,9 +1,6 @@
 <% include ./../components/header %>
   <div class="main-content">
     <div id="map-container" class="main-map"></div>
-    <div class="fangjia-iframe">
-      <iframe src="http://aissues.com/tag/fang-chan-zi-xun/"></iframe>
-    </div>
     <div class="fangjia-city">
       <div class="fangjia-city-city">
         <span>北京</span>
@@ -22,31 +19,11 @@
         <div class="main-fl" style="padding-top: 2px;">
           <img src="http://data.lbs.aissues.com/tip.png" />
         </div>
-        <div class="main-fl">数据来源于房产网站、网络评论、公众号以及本站点数据采集分析器</div>
+        <div class="main-fl">Aissues.com从各网站获取招聘信息，进行相关的数据分析</div>
       </div>
     </div>
   </div>
   <style type="text/css">
-    .fangjia-iframe {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      bottom: 25px;
-      background-color: #fff;
-      opacity: 0.9;
-      z-index: 3;
-      width: 375px;
-      border: 1px solid #ddd;
-    }
-
-    .fangjia-iframe iframe {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 375px;
-      border: none;
-    }
-
     .fangjia-city {
       height: 65px;
       position: absolute;
@@ -93,12 +70,5 @@
       margin-right: 3px;
     }
   </style>
-  <script type="text/javascript" src="/js/weizhi/fangjia.js"></script>
-  <script type="text/javascript">
-    (function () {
-      //加载iframe
-      var iframe = $('.fangjia-iframe iframe');
-      iframe.height($('.fangjia-iframe').height());
-    })();
-  </script>
+  <script type="text/javascript" src="/js/weizhi/kuaiji.js"></script>
   <% include ./../components/footer %>

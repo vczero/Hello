@@ -25,6 +25,10 @@ body {
   float: right;
 }
 
+.main-fl {
+  float: left;
+}
+
 .main-map {
   position: absolute;
   left: 14px;
@@ -36,16 +40,16 @@ body {
 }
 
 ::selection {
-  background: #188FFF;
+  background: #188fff;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #188FFF;
+  background: #188fff;
   color: #fff;
 }
 
 ::-webkit-selection {
-  background: #188FFF;
+  background: #188fff;
   color: #fff;
 }
