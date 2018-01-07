@@ -2,7 +2,26 @@
   <div class="main-content">
     <div id="map-container" class="main-map"></div>
     <div class="fangjia-iframe">
-      <iframe src="http://aissues.com/"></iframe>
+      <iframe src="http://aissues.com/tag/fang-chan-zi-xun/"></iframe>
+    </div>
+    <div class="fangjia-city">
+      <div class="fangjia-city-city">
+        <span>北京</span>
+        <span>上海</span>
+        <span>深圳</span>
+        <span>杭州</span>
+        <span>广州</span>
+        <span>厦门</span>
+        <span>西安</span>
+        <span>成都</span>
+        <span>南京</span>
+        <span>苏州</span>
+        <span>合肥</span>
+      </div>
+      <div class="fangjia-city-tip">
+        <div><img src="http://data.lbs.aissues.com/tip.png"/></div>
+        <div>数据来源于房产网站、网络评论、公众号以及本站点数据采集分析器</div>
+      </div>
     </div>
   </div>
   <style type="text/css">
@@ -24,6 +43,52 @@
       width: 375px;
       border: none;
     }
+
+    .fangjia-city {
+      height: 65px;
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      z-index: 4;
+      background-color: #fff;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    }
+
+    .fangjia-city-city span {
+      display: inline-block;
+      height: 28px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border: 1px solid #ddd;
+      line-height: 28px;
+      min-width: 45px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .fangjia-city-city span:hover {
+      background-color: #188FFF;
+      color: #fff;
+      border: 1px solid #188FFF;
+    }
+
+    .fangjia-city-tip {
+      margin-top: 4px;
+      font-size:12px;
+    }
+
+    .fangjia-city-tip div{
+      display: inline-block;
+      height:20px;
+    }
+
+    .fangjia-city-tip img{
+      width:13px;
+      vertical-align: middle;
+    }
   </style>
   <script type="text/javascript" src="/js/index/map.js"></script>
   <script type="text/javascript">
@@ -31,15 +96,6 @@
       //加载iframe
       var iframe = $('.fangjia-iframe iframe');
       iframe.height($('.fangjia-iframe').height());
-      //隐藏头部
-      var objs = iframe.contentWindow.document.getElementsByTagName('div');
-      for (var i = 0; i < objs.length; i++) {
-        var elm = objs[i];
-        if (elm.className == 'hz-header') {
-          elm.style.display = 'none';
-        }
-      }
-
     })();
   </script>
   <% include ./../components/footer %>
